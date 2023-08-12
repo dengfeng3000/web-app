@@ -1,0 +1,33 @@
+.page-aside {
+  position: fixed;
+  top: $header-height;
+  bottom: 0;
+}
+
+.aside-left {
+  left: calc(50vw - ($app-width / 2));
+}
+
+.aside-right {
+  right: calc(50vw - ($app-width / 2));
+}
+
+.aside-switch {
+  display: none;
+}
+
+// responsive
+@include mobile {
+  .page-aside {
+    display: none;
+  }
+
+  .aside-switch {
+    display: block;
+  }
+
+  .page-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

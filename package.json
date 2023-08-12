@@ -1,0 +1,51 @@
+{
+  "name": "react-ts-template",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "npx eslint --ext './**/*.{js,ts,jsx,tsx,cjs,mjs}'",
+    "lint:fix": "npx eslint --fix './**/*.{js,ts,jsx,tsx,cjs,mjs}'",
+    "stylelint:fix": "npx stylelint --fix './**/*.{css,scss,sass}'"
+  },
+  "dependencies": {
+    "@blueprintjs/core": "^5.2.0",
+    "@blueprintjs/icons": "^5.1.5",
+    "@blueprintjs/select": "^5.0.8",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@types/figlet": "^1.5.6",
+    "axios": "^1.4.0",
+    "classnames": "^2.3.2",
+    "figlet": "^1.6.0",
+    "normalize.css": "^8.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.1.2",
+    "react-router-dom": "^6.14.2",
+    "react-use": "^17.4.0",
+    "redux": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "@vitejs/plugin-react": "^2.1.0",
+    "eslint": "^8.45.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "sass": "^1.64.1",
+    "stylelint": "^15.10.2",
+    "stylelint-config-airbnb": "^0.0.0",
+    "stylelint-config-standard-scss": "^10.0.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.3",
+    "vite-plugin-svgr": "^3.2.0"
+  }
+}

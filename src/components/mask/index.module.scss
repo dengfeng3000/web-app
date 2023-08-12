@@ -1,0 +1,15 @@
+.mask {
+  position: fixed;
+  background-color: var(--c-mask);
+  transition: all .5s;
+  z-index: $z-mask;
+}
+
+.mask-hide {
+  top: 0;
+  left: 0;
+}
+
+.mask-active {
+  inset: 0;
+}

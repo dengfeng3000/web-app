@@ -1,0 +1,22 @@
+.code-snippet {
+  border: 1px solid var(--c-border);
+  border-radius: $border-radius;
+  background-color: #292d3e;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem;
+  color: #f6f7f9;
+}
+
+.code-wrapper {
+  margin: 0;
+  padding: .5rem;
+  min-height: 240px;
+  overflow: auto;
+  color: #C3E88D;
+  background-color: #292d3e;
+}

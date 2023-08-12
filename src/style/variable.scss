@@ -1,0 +1,26 @@
+@import './colors';
+
+// size
+$app-width: 1024px;
+$header-width: 1024px;
+$header-height: 48px;
+$main-width: 1024px;
+$border-radius: 2px;
+
+// z-index
+$z-header: 100;
+$z-header-menu-mobile: 101;
+$z-mask: 200;
+
+// mixin
+@mixin mobile {
+  @media (max-width: $app-width) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media (min-width: #{$app-width - 1}) {
+    @content;
+  }
+}
