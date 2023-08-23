@@ -34,7 +34,7 @@ export default createBrowserRouter([
       // },
       // default page
       {
-        path: 'example',
+        path: '',
         lazy: async () => {
           const { default: Component } = await import('@/pages/example');
           return { element: <Component /> };

@@ -1,3 +1,3 @@
 # web-app
 
-vite react blueprint
+vite react blueprint tailwindcss

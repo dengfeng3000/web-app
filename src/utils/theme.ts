@@ -1,9 +1,10 @@
 const dark = 'dark';
 const light = 'light';
-const darkCN = 'bp5-dark';
 
-export function currentTheme():SiteTheme {
-  return document.body.classList.contains(darkCN) ? dark : light;
+const html = document.documentElement;
+
+export function currentTheme(): SiteTheme {
+  return html.getAttribute('theme') === dark ? dark : light;
 }
 
 export function toggleTheme(theme?: SiteTheme) {
@@ -17,8 +18,8 @@ export function toggleTheme(theme?: SiteTheme) {
   }
 
   if (nextTheme === dark) {
-    document.body.classList.add(darkCN);
+    html.setAttribute('theme', dark);
   } else {
-    document.body.classList.remove(darkCN);
+    html.removeAttribute('theme');
   }
 }

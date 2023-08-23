@@ -9,8 +9,6 @@ import { Icon } from '@blueprintjs/core';
 import { useDispatch, useSelector } from 'react-redux';
 import { mobileWidth } from '@/setting';
 import s from './index.module.scss';
-import { SiteState } from '@/store';
-import { updateTheme } from '@/store/theme';
 
 type MenuItem = {
   title: string;
@@ -23,24 +21,6 @@ type MenuItems = MenuItem[]
 interface MenuProp {
   menuItems: MenuItems;
   onClick?: (menuItem: MenuItem)=>void;
-}
-
-// theme switch
-function ThemeSwitch(props: { className?: string }) {
-  const { className } = props;
-  // theme
-  const theme = useSelector<SiteState>((state) => state.theme);
-  // dispatch
-  const dispatch = useDispatch();
-
-  const toggleTheme = (nextTheme: SiteTheme) => {
-    dispatch(updateTheme(nextTheme));
-  };
-
-  if (theme === 'dark') {
-    return <Icon icon="flash" className={cs(s.themeSwitch, className)} onClick={() => toggleTheme('light')} />;
-  }
-  return <Icon icon="moon" className={cs(s.themeSwitch, className)} onClick={() => toggleTheme('dark')} />;
 }
 
 function Menu(props: MenuProp) {
@@ -57,7 +37,6 @@ function Menu(props: MenuProp) {
           {menuItem.title}
         </Link>
       ))}
-      <ThemeSwitch className={s.menuItem} />
     </>
   );
 }
@@ -79,7 +58,6 @@ function MobileMenu(props: MenuProp) {
       ))}
       <div className={s.mobileTheme}>
         <span>主题</span>
-        <ThemeSwitch />
       </div>
     </div>
   );
